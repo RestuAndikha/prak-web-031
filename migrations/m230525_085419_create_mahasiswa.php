@@ -3,9 +3,9 @@
 use yii\db\Migration;
 
 /**
- * Class m230525_085419_create_barang
+ * Class m230525_085419_create_mahasiswa
  */
-class m230525_085419_create_barang extends Migration
+class m230525_085419_create_mahasiswa extends Migration
 {
     /**
      * {@inheritdoc}
@@ -14,10 +14,10 @@ class m230525_085419_create_barang extends Migration
     {
         $this->createTable('barang', [
             'id' => $this->primaryKey(),
-            'nama_barang' => $this->string(),
-            'kode_barang' => $this->integer(),
-            'harga' => $this->integer(),
-            'stok' => $this->integer(),
+            'nim' => $this->string(),
+            'nama' => $this->string(),
+            'kelas' => $this->string(),
+            'status' => $this->string(),
         ]);
 
     }
@@ -27,7 +27,7 @@ class m230525_085419_create_barang extends Migration
      */
     public function safeDown()
     {
-        echo "m230525_085419_create_barang cannot be reverted.\n";
+        echo "m230525_085419_create_mahasiswa cannot be reverted.\n";
 
         return false;
     }
@@ -41,7 +41,7 @@ class m230525_085419_create_barang extends Migration
 
     public function down()
     {
-        echo "m230525_085419_create_barang cannot be reverted.\n";
+        echo "m230525_085419_create_mahasiswa cannot be reverted.\n";
 
         return false;
     }
